@@ -32,7 +32,8 @@ export default class LoginPage extends Page {
   }
 
   validateErrorMessage() {
-    cy.get(this.spanErrorMessage).should('be.visible')
+    cy.get(this.spanErrorMessage)
+      .should('be.visible')
       .should('have.text', 'Email e/ou senha inválidos')
   }
 }

@@ -19,6 +19,8 @@ import './commands'
 // Allure reports generation
 import '@shelex/cypress-allure-plugin'
 
+import 'cypress-plugin-api'
+
 Cypress.on('uncaught:exception', err => {
   // returning false here prevents Cypress from
   // failing the test

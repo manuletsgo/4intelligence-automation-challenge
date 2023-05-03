@@ -5,6 +5,7 @@ cypress/downloads
 reports
 allure-report
 allure-results
+k6-report.json
 *.lock
 *.log
 .env

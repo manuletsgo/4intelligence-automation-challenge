@@ -10,20 +10,28 @@
     "allure:history": "mv -f allure-report/history allure-results/history && rm -r allure-report",
     "allure:open": "allure open allure-report",
     "cy:open": "cypress open",
-    "test": "cypress run"
+    "test": "cypress run",
+    "test:web": "cypress run --env tags=@web",
+    "test:api": "cypress run --env tags=@api",
+    "test:k6": "k6 run k6/index.js --vus 100 --duration 10s --out json=k6-report.json"
   },
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^16.0.3",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
     "@cypress/github-action": "^4.2.0",
+    "@faker-js/faker": "^7.6.0",
     "@shelex/cypress-allure-plugin": "^2.35.2",
     "allure-commandline": "^2.21.0",
     "cypress": "^12.11.0",
+    "cypress-plugin-api": "^2.11.0",
     "dotenv": "^16.0.3",
-    "esbuild": "^0.17.12"
+    "esbuild": "^0.17.12",
+    "k6": "^0.0.0"
   },
   "cypress-cucumber-preprocessor": {
-    "stepDefinitions": "cypress/e2e/steps/**/*.{js,ts}"
+    "stepDefinitions": "cypress/**/steps/**/*.{js,ts}",
+    "filterSpecs": true,
+    "omitFiltered": true
   },
   "devDependencies": {
     "eslint": "^8.36.0",

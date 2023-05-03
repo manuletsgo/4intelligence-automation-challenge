@@ -1,37 +1,62 @@
 # Automation Challenge by 4intelligence
-> Automation technical challenge with JavaScript, [Cypress](https://www.cypress.io/) and [Cucumber](https://github.com/badeball/cypress-cucumber-preprocessor)
+
+> Desafio técnico de Automação de Testes com JavaScript, [Cypress](https://www.cypress.io/) and [Cucumber](https://github.com/badeball/cypress-cucumber-preprocessor)
 
 <img src="./cypress/docs/serverest-web.png" width="600">
-
-
 
 ## Setup ⚙️
 
 - Git\
-Default Installation
+  Instalação Padrão
 - NodeJS\
-Default Installation (LTS)
+  Instalação Padrão (LTS)
 - Dependencies
 
 ```bash
     npm install
 ```
 
+## Como Rodar ⚡
 
-## How to run ⚡
-
-- Run all tests
+- Todos os testes
 
 ```bash
-    npm test
+    npm run test
 ```
 
-- Open Cypress Dashboard
+- Testes Web
 
 ```bash
-    npm cy:open
+    npm run test:web
+```
+
+- Testes Api
+
+```bash
+    npm run test:api
+```
+
+- Testes Performance
+
+```bash
+    npm run test:k6
+```
+
+- Abrir Cypress Dashboard
+
+```bash
+    npm run cy:open
 ```
 
 ## Reports 📂
 
-At the end of the execution, the test evidence will be generated in the folder `videos`
+Ao finalizar a execução, as evidências de testes estarão disponíveis na pasta `videos`
+
+## Performance
+
+Para validar os resultados dos testes de performance solicitados, basta olhar para as métricas no retorno:
+
+- http_req_duration: Validação de 95% de respostas abaixo de 5min
+- http_req_failed: Validação de 80%+ de sucesso
+
+<img src="./cypress/docs/performance-tests.png" width="600">

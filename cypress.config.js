@@ -8,9 +8,6 @@ const allureWriter = require('@shelex/cypress-allure-plugin/writer')
 
 const { TARGET, env } = require('./cypress/config')
 
-console.log('Environment configuration:')
-console.table({ TARGET, ...env })
-
 const setupNodeEvents = async (on, config) => {
   await addCucumberPreprocessorPlugin(on, config)
 
