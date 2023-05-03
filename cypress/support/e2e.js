@@ -16,6 +16,9 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 
+// Allure reports generation
+import '@shelex/cypress-allure-plugin'
+
 Cypress.on('uncaught:exception', err => {
   // returning false here prevents Cypress from
   // failing the test

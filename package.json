@@ -5,6 +5,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "allure:clear": "rm -r allure-results allure-report || true",
+    "allure:generate": "allure generate allure-results --clean",
+    "allure:history": "mv -f allure-report/history allure-results/history && rm -r allure-report",
+    "allure:open": "allure open allure-report",
     "cy:open": "cypress open",
     "test": "cypress run"
   },
@@ -12,6 +16,8 @@
     "@badeball/cypress-cucumber-preprocessor": "^16.0.3",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
     "@cypress/github-action": "^4.2.0",
+    "@shelex/cypress-allure-plugin": "^2.35.2",
+    "allure-commandline": "^2.21.0",
     "cypress": "^12.11.0",
     "dotenv": "^16.0.3",
     "esbuild": "^0.17.12"

@@ -4,6 +4,7 @@ const createEsbuildPlugin = require('@badeball/cypress-cucumber-preprocessor/esb
 const {
   addCucumberPreprocessorPlugin
 } = require('@badeball/cypress-cucumber-preprocessor')
+const allureWriter = require('@shelex/cypress-allure-plugin/writer')
 
 const { TARGET, env } = require('./cypress/config')
 
@@ -12,6 +13,8 @@ console.table({ TARGET, ...env })
 
 const setupNodeEvents = async (on, config) => {
   await addCucumberPreprocessorPlugin(on, config)
+
+  allureWriter(on, config)
 
   on(
     'file:preprocessor',
@@ -30,7 +33,9 @@ module.exports = defineConfig({
     excludeSpecPattern: ['*.js'],
     env: {
       TARGET,
-      ...env
+      ...env,
+      allure: true,
+      allureReuseAfterSpec: true
     },
     baseUrl: env.BASE_URL
   }
