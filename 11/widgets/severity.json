@@ -1,0 +1,1 @@
+[{"uid":"a987987cdb4ad5d1","name":"Login into Account","time":{"start":1683134626364,"stop":1683134629890,"duration":3526},"status":"passed","severity":"normal"},{"uid":"7ee92034f822fde0","name":"Exception Login","time":{"start":1683134629934,"stop":1683134631094,"duration":1160},"status":"passed","severity":"normal"}]
