@@ -1,0 +1,8 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed May 03 21:16:21 GMT 2023","Wed May 03 21:16:22 GMT 2023","1272","","Login","","","","Exception Login",""
+"passed","Wed May 03 21:16:12 GMT 2023","Wed May 03 21:16:12 GMT 2023","244","","CRUD of Users","","","","Create User",""
+"passed","Wed May 03 21:16:18 GMT 2023","Wed May 03 21:16:21 GMT 2023","2238","","Login","","","","Login into Account",""
+"passed","Wed May 03 21:16:12 GMT 2023","Wed May 03 21:16:13 GMT 2023","163","","CRUD of Users","","","","Get Edited User",""
+"passed","Wed May 03 21:16:12 GMT 2023","Wed May 03 21:16:12 GMT 2023","271","","CRUD of Users","","","","Get Created User",""
+"passed","Wed May 03 21:16:12 GMT 2023","Wed May 03 21:16:12 GMT 2023","167","","CRUD of Users","","","","Update User",""
+"passed","Wed May 03 21:16:13 GMT 2023","Wed May 03 21:16:13 GMT 2023","189","","CRUD of Users","","","","Delete User",""
