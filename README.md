@@ -48,11 +48,7 @@
     npm run cy:open
 ```
 
-## Reports 📂
-
-Ao finalizar a execução, as evidências de testes estarão disponíveis na pasta `videos`
-
-## Performance
+## Testes de Performance
 
 Para validar os resultados dos testes de performance solicitados, basta olhar para as métricas no retorno:
 
@@ -60,3 +56,18 @@ Para validar os resultados dos testes de performance solicitados, basta olhar pa
 - http_req_failed: Validação de 80%+ de sucesso
 
 <img src="./cypress/docs/performance-tests.png" width="600">
+
+## Reports 📂
+
+Ao finalizar a execução, as evidências de testes estarão disponíveis na pasta `videos`
+
+Além disso, foi configurado Github Actions e integrado ao Allure Report - que pode ser visualizado acessando o link da descrição do projeto ou aqui.
+
+Algumas coisas que estão disponíveis no Allure Report:
+
+Video - apenas em broken e retired testes (necessário acessar a testes suite)
+Trace - apenas em broken e retired testes (necessário acessar a testes suite)
+Metrics
+Duration
+
+<img src="./cypress/docs/allure-report.png" width="600">
