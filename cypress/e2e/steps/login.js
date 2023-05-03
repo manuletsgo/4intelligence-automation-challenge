@@ -23,3 +23,13 @@ Then('the user should be logged', () => {
   const homePage = new HomePage()
   homePage.validatePage()
 })
+
+When('fill login with incorrect data', () => {
+  const loginPage = new LoginPage()
+  loginPage.fillIncorrectData()
+})
+
+Then('error message should be displayed', () => {
+  const loginPage = new LoginPage()
+  loginPage.validateErrorMessage()
+})

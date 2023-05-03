@@ -10,6 +10,7 @@ export default class LoginPage extends Page {
     this.inputEmail = 'input[data-testid="email"]'
     this.inputPassword = 'input[data-testid="senha"]'
     this.buttonLogin = 'button[data-testid="entrar"]'
+    this.spanErrorMessage = '.form .alert > span'
   }
 
   validatePage() {
@@ -23,5 +24,15 @@ export default class LoginPage extends Page {
 
   submitLogin() {
     cy.get(this.buttonLogin).should('be.visible').click()
+  }
+
+  fillIncorrectData() {
+    cy.get(this.inputEmail).should('be.visible').type('aa231@test.com')
+    cy.get(this.inputPassword).should('be.visible').type('11ppzz94#@2')
+  }
+
+  validateErrorMessage() {
+    cy.get(this.spanErrorMessage).should('be.visible')
+      .should('have.text', 'Email e/ou senha inválidos')
   }
 }
